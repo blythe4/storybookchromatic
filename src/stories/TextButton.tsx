@@ -1,4 +1,5 @@
 import React from "react";
+import { FaArrowRight } from "react-icons/fa";
 
 interface ButtonProps {
   /**
@@ -20,7 +21,7 @@ interface ButtonProps {
   /**
    * Button after icon
    */
-  icon?: string;
+  icon?: boolean;
   /**
    * Optional click handler
    */
@@ -33,14 +34,18 @@ interface ButtonProps {
 export const TextButton = ({
   primary = false,
   size = "medium",
-  textColor,
+  textColor = "#666",
   label,
-  icon,
+  icon = false,
   ...props
 }: ButtonProps) => {
   return (
-    <button type="button" className="text-black" {...props}>
-      {label} {icon}
+    <button
+      type="button"
+      className="flex items-center gap-2 text-black"
+      {...props}
+    >
+      {label} {icon && <FaArrowRight />}
       <style jsx>{`
         button {
           color: ${textColor};
