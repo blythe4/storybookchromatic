@@ -13,7 +13,7 @@ interface ButtonProps {
   /**
    * How large should the button be?
    */
-  size?: "sm" | "base" | "lg";
+  size?: "sm" | "base" | "2xl";
   /**
    * Button contents
    */
@@ -33,7 +33,7 @@ interface ButtonProps {
  */
 export const TextButton = ({
   primary = false,
-  size = "medium",
+  size = "base",
   textColor = "#666",
   label,
   icon = false,
