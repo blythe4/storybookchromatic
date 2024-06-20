@@ -41,14 +41,30 @@ export const Secondary: Story = {
 
 export const Large: Story = {
   args: {
-    size: "large",
+    size: "lg",
     label: "Button",
   },
 };
 
 export const Small: Story = {
   args: {
-    size: "small",
+    size: "sm",
     label: "Button",
+  },
+};
+
+export const LargeIcon: Story = {
+  args: {
+    size: "lg",
+    label: "Button",
+    icon: true,
+  },
+};
+
+export const SmallIcon: Story = {
+  args: {
+    size: "sm",
+    label: "Button",
+    icon: true,
   },
 };

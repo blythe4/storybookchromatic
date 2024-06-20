@@ -13,7 +13,7 @@ interface ButtonProps {
   /**
    * How large should the button be?
    */
-  size?: "small" | "medium" | "large";
+  size?: "sm" | "base" | "lg";
   /**
    * Button contents
    */
@@ -42,7 +42,7 @@ export const TextButton = ({
   return (
     <button
       type="button"
-      className="flex items-center gap-2 text-black"
+      className={`flex items-center gap-2 text-black text-${size}`}
       {...props}
     >
       {label} {icon && <FaArrowRight />}
